@@ -126,3 +126,30 @@ nnoremap <F5> !!$SHELL<CR>
 " z= nos muestra las sugerencias
 nnoremap <F6> :setlocal spell! spelllang=es<CR>
 
+"-----------------------------------------
+" Autoinstalación del gestor de plugins 
+"-----------------------------------------
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"-----------------------------------------
+" Plugins 
+"-----------------------------------------
+
+" Chat GTP
+call plug#begin()
+    Plug 'dense-analysis/neural'
+call plug#end()
+
+" Configuración de Chat GTP
+let g:neural = {
+\   'source': {
+\       'openai': {
+\           'api_key': $OPENAI_API_KEY,
+\       },
+\   },
+\}
