@@ -1,12 +1,13 @@
-" Vonfiguración básica de .vimrc
+" configuración básica de .vimrc
 " Author: @andriuzha
-" versión 2.2
+" versión 2.2.1
 " 21 nov 2023
 " https://github.com/andriuzha/vim
 
 " ---------------------------------------------------------------------------------
 " Configuración básica
 " ---------------------------------------------------------------------------------
+
 
 set encoding=utf-8 		" Configura el formato de codificación a utf-8.
 
@@ -46,6 +47,7 @@ set incsearch 			" Permite el resaltado en las búsquedas incrementrales
 
 set ignorecase 			" Ignora mayúsculas o minúsculas en la búsqueda
 
+
 " ---------------------------------------------------------------------------------
 " Mapeo de teclas y comandos 
 " ---------------------------------------------------------------------------------
@@ -61,16 +63,14 @@ noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
 noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<CR>
 
 " ---------------------------------------------------------------------------------
 
-nnoremap <leader>s !!$SHELL<CR>		" Invoca la Shell dentro de Vim
+nnoremap <leader>v :tabedit $MYVIMRC<CR>	" Edita el .vimrc
+nnoremap <leader>s :source $MYVIMRC<CR>		" Recarga la configuración de .vimrc
+nnoremap <leader>q :q!<CR>					" Forza la salida de Vim sin confirmación
+nnoremap <leader>zz :wq<CR>					" Guardar y salir
+nnoremap <leader>s !!$SHELL<CR>				" Invoca la Shell dentro de Vim
 
 " ---------------------------------------------------------------------------------
 
@@ -80,4 +80,3 @@ nnoremap <leader>s !!$SHELL<CR>		" Invoca la Shell dentro de Vim
 nnoremap <leader>e :setlocal spell! spelllang=es<CR>
 
 " ---------------------------------------------------------------------------------
-nmap <leader>v :tabedit $MYVIMRC<CR>	" Atajo para editar el .vimrc
