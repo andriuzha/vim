@@ -1,12 +1,14 @@
-" Configuración básica de .vimrc
+" configuración básica de .vimrc
 " Author: @andriuzha
-" Version: 2.2.2
+" versión 2.2.2
 " 21 nov 2023
 " https://github.com/andriuzha/vim
 
 " ---------------------------------------------------------------------------------
 " Configuración básica
 " ---------------------------------------------------------------------------------
+
+set nocompatible " Elimina la compatibilidad con versiones antiguas 
 
 set encoding=utf-8  " Configura el formato de codificación a utf-8.
 
@@ -18,7 +20,7 @@ set paste  " Nos permite hacer copy-paste respetando tabulaciones
 
 set mouse=r  " Permite interactuar con el ratón 
 
-set visualbell  " Muestra una alerta de error
+" set visualbell  " Muestra una alerta de error
 
 set number  " Muestra los números de línea
 
@@ -45,6 +47,8 @@ set hlsearch  " Resalta las conincidencias de la búsqueda
 set incsearch  " Permite el resaltado en las búsquedas incrementrales
 
 set ignorecase  " Ignora mayúsculas o minúsculas en la búsqueda
+
+set backspace=2 " Permite utilizar Backspace 
 
 
 " ---------------------------------------------------------------------------------
