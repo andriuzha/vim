@@ -1,7 +1,7 @@
 " configuración básica de .vimrc
 " Author: @andriuzha
-" versión 2.2.2
-" 21 nov 2023
+" versión 2.2.3
+" 09 abr 2024
 " https://github.com/andriuzha/vim
 
 " ---------------------------------------------------------------------------------
