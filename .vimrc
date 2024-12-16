@@ -1,7 +1,7 @@
 " configuración básica de .vimrc
 " Author: @andriuzha
-" versión 2.2.3
-" 09 abr 2024
+" versión 2.2.4
+" 16 dic 2024
 " https://github.com/andriuzha/vim
 
 " ---------------------------------------------------------------------------------
@@ -20,7 +20,9 @@ set paste  " Nos permite hacer copy-paste respetando tabulaciones
 
 set mouse=r  " Permite interactuar con el ratón 
 
-" set visualbell  " Muestra una alerta de error
+set visualbell  " Muestra una alerta de error
+
+set belloff=all " Desactiva el sonido del error
 
 set number  " Muestra los números de línea
 
@@ -70,8 +72,9 @@ nnoremap <leader>q :q!<CR>  " Forza la salida de Vim sin confirmación
 nnoremap <leader>zz :wq<CR>  " Guardar y salir
 nnoremap <leader>s !!$SHELL<CR>  " Invoca la Shell dentro de Vim
 
-
 " Realiza una corrección otografíca 
 " Es necesario descargar plugin al activar la función
+" El plugin se activa con Espacio e
 " z= nos muestra las sugerencias
+
 nnoremap <leader>e :setlocal spell! spelllang=es<CR> 
