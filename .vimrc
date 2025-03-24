@@ -1,7 +1,7 @@
 " configuración básica de .vimrc
-" Author: @andriuzha
-" versión 2.2.4
-" 16 dic 2024
+" @andriuzha
+" version 2.2.5
+" 2025-03-24
 " https://github.com/andriuzha/vim
 
 " ---------------------------------------------------------------------------------
@@ -72,9 +72,21 @@ nnoremap <leader>q :q!<CR>  " Forza la salida de Vim sin confirmación
 nnoremap <leader>zz :wq<CR>  " Guardar y salir
 nnoremap <leader>s !!$SHELL<CR>  " Invoca la Shell dentro de Vim
 
+map <Enter> o<ESC> " Añade una linea por debajo de la actual
+map <S-Enter> O<ESC> " Anade una linea por arriba de la actual
+
+
 " Realiza una corrección otografíca 
 " Es necesario descargar plugin al activar la función
 " El plugin se activa con Espacio e
 " z= nos muestra las sugerencias
 
 nnoremap <leader>e :setlocal spell! spelllang=es<CR> 
+
+" ---------------------------------------------------------------------------------
+" Tema de colores
+" ---------------------------------------------------------------------------------
+
+colorscheme andriuzha " Carga el tema de colores personalizado
+
+set background=dark  " Asegura el modo oscuro
